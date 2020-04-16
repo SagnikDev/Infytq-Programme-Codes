@@ -392,33 +392,55 @@ from threading import Thread
 
 # thread1.join()
 # thread2.join()
-import math
+# import math
 
-g=(lambda x,y: x*(x+y) )
+# g=(lambda x,y: x*(x+y) )
 
-print(g(7,3))
+# print(g(7,3))
 
-s=(lambda x:math.factorial(x))
-print(s(7))
+# s=(lambda x:math.factorial(x))
+# print(s(7))
 
-h=(lambda x: x>40)
-print(h(50))
+# h=(lambda x: x>40)
+# print(h(50))
 
-m=(lambda x,y,z:x+y)
+# m=(lambda x,y,z:x+y)
 
-print(m(1,2,3))
+# print(m(1,2,3))
 
 
 
-principal_amount=20
-duration=10
-rate_of_interest=10
+# principal_amount=20
+# duration=10
+# rate_of_interest=10
 
-simple_interest =(lambda p,d,r: (p*d*r)/100 )
+# simple_interest =(lambda p,d,r: (p*d*r)/100 )
 
-# if(simple_interest(principal_amount,duration,rate_of_interest)>1000):
-#     print("Platinum Member"+str(simple_interest))
-# else:
-#     print("Gold Member"+str(simple_interest))
+# # if(simple_interest(principal_amount,duration,rate_of_interest)>1000):
+# #     print("Platinum Member"+str(simple_interest))
+# # else:
+# #     print("Gold Member"+str(simple_interest))
 
-print(simple_interest(principal_amount,duration,rate_of_interest))
+# print(simple_interest(principal_amount,duration,rate_of_interest))
+
+
+
+def sum_all(function, data):
+    result_sum=0
+    for w in data:
+        if(function(w)):
+            result_sum = result_sum+ w
+    return result_sum
+
+Q=[1,3,4,5,6,7,8,9,10,15,20]
+
+p = lambda x:x
+
+q = lambda x : x%2 == 0
+
+r = lambda x : x%3 == 0
+
+
+print(sum_all(p,Q))
+print(sum_all(q,Q))
+print(sum_all(r,Q))
