@@ -1,5 +1,5 @@
-word1="TRAC"
-word2="HCRAM"
+word1="RAC"
+word2="RAM"
 word1=[i for i in word1]
 word2=[i for i in word2]
 
