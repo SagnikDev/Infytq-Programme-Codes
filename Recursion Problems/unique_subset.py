@@ -1,16 +1,16 @@
-sets=[]
+sets={""}
 def subset(word,output):
     if(word==""):
-        # sets.append(output)
-        print(output)
+        sets.add(output)
+        # print(output)
     else:
         output1=output+word[0]
         output2=output
         subset(word[1:],output1)
         subset(word[1:],output2)
-    # return sets
+    return sets
 
     
-string="abc"
+string="aab"
 output=""
 print(subset(string,output))
